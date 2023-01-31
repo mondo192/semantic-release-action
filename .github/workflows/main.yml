@@ -1,8 +1,5 @@
 name: semantic-release-action
 on:
-  push:
-    branches: 
-      - main
   pull_request:
     types:
       - openend
