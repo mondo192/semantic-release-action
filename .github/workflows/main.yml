@@ -2,7 +2,7 @@ name: semantic-release-action
 on:
   pull_request:
     types:
-      - openend
+      - opened
       - edited
       - synchronize
 jobs:
