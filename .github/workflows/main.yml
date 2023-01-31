@@ -15,10 +15,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Validate PR title
+        if: ${{ github.ref != 'refs/heads/main' }}
         uses: ./.github/actions/semantic-pull-request
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: ./.github/actions/semantic-release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
