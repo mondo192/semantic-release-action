@@ -8,6 +8,6 @@ runs:
   using: "composite"
   steps:
     - uses: go-semantic-release/action@v1
-      with:
+      env:
         github-token: ${{ inputs.token }}
 
