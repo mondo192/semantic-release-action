@@ -1,0 +1,17 @@
+name: action-semantic-pull-request
+description: action-semantic-pull-request
+inputs:
+  token:
+    description: "The github secret token"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Validate PR title
+      uses: amannn/action-semantic-pull-request@v5
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+    - uses: go-semantic-release/action@v1
+      with:
+        github-token: ${{ inputs.token }}
+
