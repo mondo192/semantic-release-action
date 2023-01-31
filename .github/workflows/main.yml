@@ -19,11 +19,11 @@ jobs:
           fetch-depth: 0
       - name: Validate PR title
         if: ${{ github.ref != 'refs/heads/main' }}
-        uses: ./.github/actions/semantic-pull-request
+        uses: .github/actions/semantic-pull-request@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: ./.github/actions/semantic-release
+        uses: .github/actions/semantic-release@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
