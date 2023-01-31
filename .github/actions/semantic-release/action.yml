@@ -7,7 +7,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: go-semantic-release/action@v1
-      env:
+    - name: Release
+      uses: go-semantic-release/action@v1
+      with:
         github-token: ${{ inputs.token }}
 
