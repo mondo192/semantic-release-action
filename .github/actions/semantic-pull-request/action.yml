@@ -9,6 +9,6 @@ runs:
   steps:
     - name: Validate PR title
       uses: amannn/action-semantic-pull-request@v5
-      env:
+      with:
         GITHUB_TOKEN: ${{ inputs.token }}
 
