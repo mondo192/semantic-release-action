@@ -22,7 +22,7 @@ jobs:
         uses: mondo192/semantic-release-action/.github/actions/semantic-pull-request@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Release
+      - name: Semantic release
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: mondo192/semantic-release-action/.github/actions/semantic-release@main
         with:
